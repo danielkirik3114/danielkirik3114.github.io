@@ -19,5 +19,13 @@
 </head>
 <body>
   <h1>Привет, мир!</h1>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log('Service Worker зарегистрирован'))
+      .catch(err => console.error('SW ошибка', err));
+  }
+</script>
 </body>
 </html>
